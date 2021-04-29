@@ -1,25 +1,29 @@
-Version 2.0.8
-Last modified: 16-June-2019
+Version 0.1j.0
+Last modified: 29-April-2021
 Website: http://www.euterpea.com
- _____      _                             
-|  ___|    | |                            
-| |__ _   _| |_ ___ _ __ _ __   ___  __ _ 
-|  __| | | | __/ _ \ '__| '_ \ / _ \/ _` |
-| |__| |_| | ||  __/ |  | |_) |  __/ (_| |
-\____/\__,_|\__\___|_|  | .__/ \___|\__,_|
-                        | |               
-                        |_|               
 
+ ______      _                             ___  _____ 
+|  ____|    | |                           |__ \| ____|
+| |__  _   _| |_ ___ _ __ _ __   ___  __ _   ) | |__  
+|  __|| | | | __/ _ \ '__| '_ \ / _ \/ _` | / /|___ \ 
+| |___| |_| | ||  __/ |  | |_) |  __/ (_| |/ /_ ___) |
+\______\__,_|\__\___|_|  | .__/ \___|\__,_|____|____/ 
+                         | |                          
+                         |_|                          
 
 Maintainers:
-  Donya Quick <donyaquick@gmail.com>
+  Vladimir Lopati <madjestic13@gmail.com>
 
 Authors:
   Paul Hudak
   Eric Cheng
   Hai (Paul) Liu
   Donya Quick 
-  Dan Winograd-Cort 
+  Dan Winograd-Cort
+
+This package is an attempt to bring Euterpea project up to the modern
+haskell, cabal tooling standards, as well as a break away from the
+implementation limits of the original.
 
 Euterpea is a domain-specific language embedded in Haskell for 
 computer music research, education, and development, providing 
@@ -38,7 +42,7 @@ GitHub version of the library: https://github.com/Euterpea/Euterpea2
 Bugs still found in the GitHub version should be reported using the 
 issues page: https://github.com/Euterpea/Euterpea2/issues
 
-PULL REQUESTS WILL BE IGNORED. Bug fixes should be submitted through
+PULL REQUESTS WILL *NOT* BE IGNORED. Bug fixes should be submitted through
 the issues page with a detailed explanation of the alterations.
 
 Please send any other questions and comments to Donya Quick 
@@ -46,3 +50,5 @@ Please send any other questions and comments to Donya Quick
 
 Installation instructions and additional examples are available at
 the Euterpea website: http://www.euterpea.com
+
+A quick-start for Linux is available here: http://madjestic.github.io/posts/2018-11-29-a-quick-start-with-Euterpea.html
