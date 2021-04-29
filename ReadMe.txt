@@ -1,4 +1,4 @@
-Version 0.1j.0
+Version 0.1.0
 Last modified: 29-April-2021
 Website: http://www.euterpea.com
 
@@ -12,7 +12,7 @@ Website: http://www.euterpea.com
                          |_|                          
 
 Maintainers:
-  Vladimir Lopati <madjestic13@gmail.com>
+  Vladimir Lopatin <madjestic13@gmail.com>
 
 Authors:
   Paul Hudak
