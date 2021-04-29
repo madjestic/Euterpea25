@@ -1,22 +1,26 @@
-name:           Euterpea
-version:        2.0.8
-Cabal-Version:  >= 1.8
+name:           Euterpea25
+version:        1.0.0.0
+Cabal-Version:  >= 2.0
 license:        BSD3
 license-file:	License
 copyright:      Copyright (c) 2008-2019 Euterpea authors
 category:       Sound, Music
 stability:      experimental
-build-type:     Custom
+build-type:     Simple
 author:         Paul Hudak <paul.hudak@yale.edu>,
                 Eric Cheng <eric.cheng@aya.yale.edu>,
                 Hai (Paul) Liu <hai.liu@aya.yale.edu>,
                 Donya Quick <donyaquick@gmail.com>,
                 Dan Winograd-Cort <dwincort@gmail.com >
-maintainer:     Donya Quick <donyaquick@gmail.com>
+maintainer:     Vladimir Lopatin <madjestic13@gmail.com>
 bug-reports:    https://github.com/Euterpea/Euterpea2/issues
 homepage:       http://www.euterpea.com
 synopsis:       Library for computer music research and education
 description:
+        This package is an attempt to bring Euterpea project up to the modern
+        haskell, cabal tooling standards, as well as a break away from the
+        implementation limits of the original.
+        
         Euterpea is a domain-specific language embedded in Haskell for
         computer music research, education, and development, providing
         both note-level and signal-level abstractions.  It is a descendant
@@ -29,15 +33,54 @@ description:
 extra-source-files:
         ReadMe.txt
 
-Library
-  hs-source-dirs: .
+executable test
+  main-is:      Main.hs           
+  hs-source-dirs:
+                app
+              , src
   ghc-options: -O2 -funbox-strict-fields -fexcess-precision
-  extensions: CPP
+  build-depends:
+        base                ^>= 4.14,
+        arrows >= 0.4 && < 0.5,
+        array>=0.5.0.0 && <=0.6,
+        deepseq>=1.3.0.2 && <=1.5,
+        random>=1.0.1.1 && <=1.2,
+        PortMidi==0.2.0.0,
+        HCodecs >= 0.5.1,
+        stm >= 2.4 && <2.6,
+        containers>=0.5.5.1 && <0.7,
+        bytestring>=0.10.4.0 && <= 0.10.9,
+        heap >= 1.0 && < 2.0,
+        ghc-prim
+                
+  other-modules:
+        Paths_Euterpea25,
+        Euterpea
+  default-language:
+                Haskell2010
+  
+Library
+  hs-source-dirs: src
+  ghc-options: -O2 -funbox-strict-fields -fexcess-precision
+  default-extensions: CPP
+  build-depends:
+        base >= 4 && < 5,
+        arrows >= 0.4 && < 0.5,
+        array>=0.5.0.0 && <=0.6,
+        deepseq>=1.3.0.2 && <=1.5,
+        random>=1.0.1.1 && <=1.2,
+        PortMidi==0.2.0.0,
+        HCodecs >= 0.5.1,
+        stm >= 2.4 && <2.6,
+        containers>=0.5.5.1 && <0.7,
+        bytestring>=0.10.4.0 && <= 0.10.9,
+        heap >= 1.0 && < 2.0,
+        ghc-prim
   exposed-modules:
-        Euterpea,
-        Euterpea.Music,
         Control.Arrow.ArrowP,
         Control.SF.SF,
+        Euterpea,
+        Euterpea.Music,
         Euterpea.IO.Audio.Basics,
         Euterpea.IO.Audio.BasicSigFuns,
         Euterpea.IO.Audio.IO,
@@ -56,16 +99,6 @@ Library
         Euterpea.IO.MIDI.ExportMidiFile,
         Euterpea.IO.MIDI
   other-modules:
-  build-depends:
-        base >= 4 && < 5,
-        arrows >= 0.4 && < 0.5,
-        array>=0.5.0.0 && <=0.6,
-        deepseq>=1.3.0.2 && <=1.5,
-        random>=1.0.1.1 && <=1.2,
-        PortMidi==0.2.0.0,
-        HCodecs == 0.5.1,
-        stm >= 2.4 && <2.6,
-        containers>=0.5.5.1 && <0.7,
-        bytestring>=0.10.4.0 && <= 0.10.9,
-        heap >= 1.0 && < 2.0,
-        ghc-prim
+        Paths_Euterpea25
+  default-language:
+        Haskell2010
