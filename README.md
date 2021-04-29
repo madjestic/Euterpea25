@@ -18,11 +18,11 @@ Website: http://www.euterpea.com
 Vladimir Lopatin <madjestic13@gmail.com>
 
 ### Authors:
-  Paul Hudak
-  Eric Cheng
-  Hai (Paul) Liu
-  Donya Quick 
-  Dan Winograd-Cort
+Paul Hudak
+Eric Cheng
+Hai (Paul) Liu
+Donya Quick 
+Dan Winograd-Cort
 
 This package is an attempt to bring Euterpea project up to the modern
 haskell, cabal tooling standards, as well as a break away from the
