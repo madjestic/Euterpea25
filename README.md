@@ -2,7 +2,7 @@ Version 0.1.0
 Last modified: 29-April-2021
 Website: http://www.euterpea.com
 
-```bash
+```
 
  ______      _                             ___  _____ 
 |  ____|    | |                           |__ \| ____|
