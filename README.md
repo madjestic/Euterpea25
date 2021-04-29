@@ -2,15 +2,18 @@ Version 0.1.0
 Last modified: 29-April-2021
 Website: http://www.euterpea.com
 
+```bash
+
  ______      _                             ___  _____ 
 |  ____|    | |                           |__ \| ____|
 | |__  _   _| |_ ___ _ __ _ __   ___  __ _   ) | |__  
 |  __|| | | | __/ _ \ '__| '_ \ / _ \/ _` | / /|___ \ 
 | |___| |_| | ||  __/ |  | |_) |  __/ (_| |/ /_ ___) |
-\______\__,_|\__\___|_|  | .__/ \___|\__,_|____|____/ 
+|______\__,_|\__\___|_|  | .__/ \___|\__,_|____|____/ 
                          | |                          
                          |_|                          
 
+```
 ### Maintainers:
 Vladimir Lopatin <madjestic13@gmail.com>
 
@@ -42,8 +45,7 @@ GitHub version of the library: https://github.com/Euterpea/Euterpea2
 Bugs still found in the GitHub version should be reported using the 
 issues page: https://github.com/Euterpea/Euterpea2/issues
 
-PULL REQUESTS WILL *NOT* BE IGNORED. Bug fixes should be submitted through
-the issues page with a detailed explanation of the alterations.
+PULL REQUESTS WILL *NOT* BE IGNORED.
 
 Please send any other questions and comments to Donya Quick 
 (donyaquick@gmail.com).
