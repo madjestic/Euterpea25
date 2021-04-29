@@ -11,10 +11,10 @@ Website: http://www.euterpea.com
                          | |                          
                          |_|                          
 
-Maintainers:
-  Vladimir Lopatin <madjestic13@gmail.com>
+### Maintainers:
+Vladimir Lopatin <madjestic13@gmail.com>
 
-Authors:
+### Authors:
   Paul Hudak
   Eric Cheng
   Hai (Paul) Liu
@@ -33,7 +33,7 @@ as well as serious computer music applications.  Euterpea is a
 wide-spectrum DSL, suitable for high-level music representation, 
 algorithmic composition, and analysis; mid-level concepts such as 
 MIDI; and low-level audio processing, sound synthesis, and instrument 
-design.  
+design.
 
 See the License file for licensing information.
 
@@ -49,6 +49,6 @@ Please send any other questions and comments to Donya Quick
 (donyaquick@gmail.com).
 
 Installation instructions and additional examples are available at
-the Euterpea website: http://www.euterpea.com
+the Euterpea website: [www.euterpea.com](http://www.euterpea.com)
 
-A quick-start for Linux is available here: http://madjestic.github.io/posts/2018-11-29-a-quick-start-with-Euterpea.html
+A quick-start for Linux is available here: [A Quick Start with Euterpea](http://madjestic.github.io/posts/2018-11-29-a-quick-start-with-Euterpea.html)
