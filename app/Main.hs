@@ -2,4 +2,7 @@ module Main where
 
 import Euterpea
 
-main = undefined
+main = do
+  putStrLn "Playing Sound..."
+  playDev 3 $ instrument Clavinet $ c 4 qn
+

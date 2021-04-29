@@ -31,9 +31,9 @@ description:
         MIDI; and low-level audio processing, sound synthesis, and instrument
         design.
 extra-source-files:
-        ReadMe.txt
+        README.md
 
-executable test
+executable PlayMe
   main-is:      Main.hs           
   hs-source-dirs:
                 app
