@@ -164,6 +164,9 @@ the MEvent framework.
 > rest            :: Dur -> Music a
 > rest d          = Prim (Rest d)
 
+> rest'           :: Octave -> Dur ->  Music a
+> rest' _ d       = Prim (Rest d)
+
 > tempo           :: Dur -> Music a -> Music a
 > tempo r m       = Modify (Tempo r) m
 

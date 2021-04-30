@@ -1,19 +1,20 @@
 > module Euterpea.IO.MIDI.Play (
->     play -- standard playback, allows infinite values
->     ,playDev -- play to a custom device, allows infinite values
->     ,playS -- play with strict timing (finite values only)
->     ,playDevS -- play to a custom device with strict timing (finite values only)
->     ,playC -- custom playback implementation to replace playA, playS, playDev, etc.
->     ,devices -- function that prints available MIDI device information
->     ,musicToMsgs' -- music to MIDI message conversion
->     ,linearCP -- linear channel assignment policy
->     ,dynamicCP -- dynamic channel assignment policy
->     ,predefinedCP -- user-specified channel map (for MUIs)
->     ,defParams
->     ,playM'
->     ,PlayParams(..)
->     ,ChannelMapFun
->     ,ChannelMap
+>       play         -- standard playback, allows infinite values
+>     , playDev      -- play to a custom device, allows infinite values
+>     , playDev'     -- play to a custom device with custom parms, allows infinite values
+>     , playS        -- play with strict timing (finite values only)
+>     , playDevS     -- play to a custom device with strict timing (finite values only)
+>     , playC        -- custom playback implementation to replace playA, playS, playDev, etc.
+>     , devices      -- function that prints available MIDI device information
+>     , musicToMsgs' -- music to MIDI message conversion
+>     , linearCP     -- linear channel assignment policy
+>     , dynamicCP    -- dynamic channel assignment policy
+>     , predefinedCP -- user-specified channel map (for MUIs)
+>     , defParams
+>     , playM'
+>     , PlayParams(..)
+>     , ChannelMapFun
+>     , ChannelMap
 >     ) where
 
 > import Codec.Midi hiding (Tempo)
@@ -35,11 +36,11 @@
 Playback parameter data type.
 
 > data PlayParams = PlayParams{
->     strict :: Bool, -- strict timing (False for infinite values)
+>     strict     :: Bool, -- strict timing (False for infinite values)
 >     chanPolicy :: ChannelMapFun, -- channel assignment policy
->     devID :: Maybe OutputDeviceID, -- output device (Nothing means to use the OS default)
+>     devID      :: Maybe OutputDeviceID, -- output device (Nothing means to use the OS default)
 >     closeDelay :: Time, -- offset in seconds to avoid truncated notes
->     perfAlg :: Music1 -> [MEvent]
+>     perfAlg    :: Music1 -> [MEvent]
 >     }
 
 Default parameters are the default pmap+context, allowing for infinite playback,
@@ -71,7 +72,10 @@ arbitrarily large delays)
 > playDev :: (ToMusic1 a, NFData a) => Int -> Music a -> IO ()
 > playDev i = playC defParams{devID = Just $ unsafeOutputID i, perfAlg=fixPerf} where
 >     fixPerf = map (\e -> e{eDur = max 0 (eDur e - 0.000001)}) . perform
-
+>
+> playDev' :: (ToMusic1 a, NFData a) => Int -> PlayParams -> Music a -> IO ()
+> playDev' i parms = playC parms{devID = Just $ unsafeOutputID i, perfAlg=fixPerf} where
+>     fixPerf = map (\e -> e{eDur = max 0 (eDur e - 0.000001)}) . perform
 > playDevS :: (ToMusic1 a, NFData a) => Int -> Music a -> IO()
 > playDevS i = playC defParams{strict=True, devID = Just $ unsafeOutputID i}
 

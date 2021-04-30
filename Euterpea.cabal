@@ -33,7 +33,7 @@ description:
 extra-source-files:
         README.md
 
-executable PlayMe
+executable playme
   main-is:      Main.hs           
   hs-source-dirs:
                 app
